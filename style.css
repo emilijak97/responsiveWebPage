@@ -1,0 +1,216 @@
+@font-face {
+    font-family: 'Gotham Rounded';
+    src: url('fonts/GothamRounded-Bold.woff2') format('woff2'), url('fonts/GothamRounded-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Rounded';
+    src: url('fonts/GothamRounded-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Rounded';
+    src: url('fonts/GothamRounded-Book.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Gotham Rounded', sans-serif;
+    padding-bottom: 50px;
+    background-image: url("images/dog.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    grid-template-areas: ". content content content content .";
+}
+
+.grid-benefit-detail {
+    margin-top: 4rem;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.content {
+    grid-area: content;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.brand-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    margin-right: .5rem;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+.benefit-detail {
+    grid-column: span 2;
+    margin: 2rem;
+}
+
+.benefit-detail-image img {
+    align-items: center;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.benefit-detail-title {
+    text-align: center;
+    font-size: 1.75rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.benefit-detail-text {
+    font-size: 1.5rem;
+    color: rgb(221, 213, 213);
+    font-weight: lighter;
+}
+
+.adress {
+    grid-column: span 6;
+    text-align: center;
+}
+
+.phone {
+    grid-column: span 6;
+    text-align: center;
+}
+
+.hours {
+    grid-column: span 6;
+    text-align: center;
+}
+
+.contact-all {
+    color: white;
+    margin-top: 4rem;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+    font-weight: 500;
+}
+
+@media (max-width: 1350px) {
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-areas: "content";
+    }
+    .content {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .grid-benefit-detail {
+        grid-template-columns: 1fr;
+        grid-template-areas: "benefit-detail";
+    }
+    .benefit-detail-image img {
+        max-width: 50%;
+        margin-bottom: 2rem;
+    }
+    .benefit-detail {
+        text-align: center;
+    }
+    .benefit-detail-title {
+        font-size: 1.5rem;
+    }
+    .benefit-detail-text {
+        font-size: 1.4rem;
+    }
+    .contact-all {
+        font-size: 0.9rem;
+    }
+    .title {
+        font-size: 2.2rem;
+    }
+    .sub-title {
+        font-size: 1.1;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .brand-name {
+        display: none;
+    }
+    .logo {
+        margin-top: 1rem;
+    }
+    .benefit-detail-title {
+        font-size: 1.25rem;
+    }
+    .benefit-detail-text {
+        font-size: 1.15rem;
+    }
+    .contact-all {
+        font-size: 0.7rem;
+    }
+    .title {
+        font-size: 1.8rem;
+    }
+    .sub-title {
+        font-size: 1.1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .benefit-detail-image img {
+        margin-bottom: 0.75rem;
+    }
+    .benefit-detail-title {
+        margin-bottom: 0.75rem;
+    }
+    .benefit-detail-text {
+        margin-bottom: 0.75rem;
+    }
+    rem .benefit-detail {
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+}
